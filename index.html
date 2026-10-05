@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="B.I Records — premium Ghanaian beats, instrumentals and production-ready music.">
+  <title>B.I Records | Premium Beats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Paystack Popup V2 -->
+  <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+  <div class="ghana-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="B.I Records home">
+      <img src="assets/bi-records-logo.jpeg" alt="B.I Records logo">
+      <div>
+        <strong>B.I RECORDS</strong>
+        <small>Symphony Of Class And Excellence</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#beats">Beats</a>
+      <a href="#licenses">Licensing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" id="cartButton" type="button">
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="kente-badge">GHANA • WEST AFRICA</div>
+        <h1>Find the sound<br><em>behind your next hit.</em></h1>
+        <p>Premium Afrobeat, Afropop, Hip-Hop, Drill, R&B and Ghana-inspired instrumentals crafted by B.I Records.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#beats">Explore Beats</a>
+          <a class="btn btn-ghost" href="#licenses">View Licenses</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="B.I Records visual identity">
+        <div class="adinkra adinkra-one">✦</div>
+        <div class="adinkra adinkra-two">✺</div>
+        <div class="sound-orb"><span>♪</span><span>♫</span><span>♪</span></div>
+        <img src="assets/bi-records-logo.jpeg" alt="" class="hero-logo">
+      </div>
+    </section>
+
+    <section class="player-bar" id="miniPlayer">
+      <div class="now-playing-icon">▶</div>
+      <div class="now-playing">
+        <small>NOW PLAYING</small>
+        <strong id="nowTitle">Select a beat to preview</strong>
+      </div>
+      <div class="wave" id="wave"></div>
+      <span class="time" id="playerTime">0:00</span>
+      <audio id="audioPlayer" preload="none"></audio>
+    </section>
+
+    <section class="catalog" id="beats">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE B.I SOUND</span>
+          <h2>Featured Beats</h2>
+        </div>
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Search beats, moods, genres..." aria-label="Search beats">
+          <select id="genreFilter" aria-label="Filter by genre">
+            <option value="all">All genres</option>
+            <option value="Afrobeat">Afrobeat</option>
+            <option value="Afropop">Afropop</option>
+            <option value="Drill">Drill</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="R&B">R&B</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="beat-grid" id="beatGrid"></div>
+    </section>
+
+    <section class="licenses" id="licenses">
+      <div class="section-heading centered">
+        <span class="eyebrow">SIMPLE • CLEAR • CREATOR FRIENDLY</span>
+        <h2>Choose your license</h2>
+        <p>Buy a beat, select a license, pay securely with Paystack and receive your download after payment is confirmed.</p>
+      </div>
+
+      <div class="license-grid">
+        <article class="license-card">
+          <span class="license-label">STARTER</span>
+          <h3>MP3 Lease</h3>
+          <strong>GH₵ 150</strong>
+          <ul><li>Tagged MP3</li><li>Up to 2,500 streams</li><li>1 music video</li></ul>
+          <button class="btn btn-outline choose-license" data-license="MP3 Lease" data-price="150">Choose MP3</button>
+        </article>
+        <article class="license-card featured-license">
+          <span class="license-label">POPULAR</span>
+          <h3>WAV Lease</h3>
+          <strong>GH₵ 300</strong>
+          <ul><li>High-quality WAV</li><li>Up to 10,000 streams</li><li>2 music videos</li></ul>
+          <button class="btn btn-primary choose-license" data-license="WAV Lease" data-price="300">Choose WAV</button>
+        </article>
+        <article class="license-card">
+          <span class="license-label">PRO</span>
+          <h3>Exclusive</h3>
+          <strong>GH₵ 1,500</strong>
+          <ul><li>Exclusive ownership</li><li>WAV + stems</li><li>Unlimited commercial use</li></ul>
+          <button class="btn btn-outline choose-license" data-license="Exclusive" data-price="1500">Choose Exclusive</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <span class="eyebrow">OUR SOUND</span>
+        <h2>Rooted in Ghana.<br>Built for the world.</h2>
+      </div>
+      <p>B.I Records brings a modern African production aesthetic to artists, songwriters, filmmakers and content creators. From Accra energy to global Hip-Hop and R&B textures, every beat is designed to give your next record character.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div>
+        <span class="eyebrow">WORK WITH B.I RECORDS</span>
+        <h2>Need a custom beat?</h2>
+        <p>For custom production, exclusive licensing, collaborations and studio enquiries, contact B.I Records.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:info@birecords.com">Contact B.I Records</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/bi-records-logo.jpeg" alt="B.I Records logo">
+      <span>© <span id="year"></span> B.I Records</span>
+    </div>
+    <p>Symphony Of Class And Excellence.</p>
+  </footer>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button id="closeCart" type="button" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">GH₵ 0.00</strong></div>
+    <button class="btn btn-primary pay-btn" id="payButton" type="button">Pay with Paystack</button>
+    <p class="secure-note">Secure checkout. Replace the public key in <code>script.js</code> before going live.</p>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal" type="button">×</button>
+      <span class="eyebrow">CHECKOUT</span>
+      <h2>Complete your purchase</h2>
+      <p id="checkoutSummary">Enter your email to continue.</p>
+      <label for="customerEmail">Email address</label>
+      <input id="customerEmail" type="email" placeholder="you@example.com" required>
+      <button class="btn btn-primary full" id="startPayment" type="button">Continue to Paystack</button>
+      <small>Payment is processed securely by Paystack. Your secret key must never be placed in this file.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
