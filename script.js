@@ -60,7 +60,7 @@ window.previewBeat = function(id){
   const beat = beats.find(b => b.id === id);
   if(!beat) return;
   nowTitle.textContent = `${beat.title} • ${beat.genre}`;
-  audio.src = https://github.com/jamegatcher1-hue/BI-Records--website/blob/main/Accra%20After%20Dark.mp3;
+  audio.src = beat.audioSrc;
   audio.play().catch(() => {
     nowTitle.textContent = `${beat.title} — add its MP3 to /audio/ to enable preview`;
   });
